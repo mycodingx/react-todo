@@ -1,0 +1,42 @@
+.container {
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 375px;
+    height: 667px;
+    position: relative;
+    overflow: scroll;
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    position: fixed;
+    background: #ffffff;
+    width: 326px;
+}
+
+.icon {
+    font-size: 20px;
+    color: #ff495c;
+    cursor: pointer;
+}
+
+.item-list {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+}
+
+.item {
+    padding: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
