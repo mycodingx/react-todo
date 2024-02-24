@@ -32,3 +32,15 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: #555; /* Set the color of the scrollbar handle on hover */
 }
+
+.mt-70 {
+    margin-top: 70px;
+}
+
+.p-10 {
+    padding: 10px;
+}
+
+.text-center {
+    text-align: center;
+}

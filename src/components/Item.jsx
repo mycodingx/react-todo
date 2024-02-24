@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
     BsFillTrashFill,
     BsFillPencilFill,
@@ -12,14 +13,20 @@ function truncateString(str, maxLength) {
     return str;
 }
 
-function Item({ task }) {
+function Item({ id, task }) {
     return (
         <div className="item">
             <span>{truncateString(task, 28)}</span>
             <div className="actions">
-                <BsBoxArrowInRight className="icon" />
-                <BsFillPencilFill className="icon" />
-                <BsFillTrashFill className="icon" />
+                <Link to={`/view/${id}`}>
+                    <BsBoxArrowInRight className="icon" />
+                </Link>
+                <Link to={`/edit/${id}`}>
+                    <BsFillPencilFill className="icon" />
+                </Link>
+                <Link to="/">
+                    <BsFillTrashFill className="icon" />
+                </Link>
             </div>
         </div>
     );
