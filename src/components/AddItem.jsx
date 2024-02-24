@@ -30,7 +30,7 @@ const AddItem = () => {
                         className="text"
                         rows={10}
                         placeholder="Add your task description..."
-                        name="description"
+                        name="task"
                         onChange={handleChange}
                         required
                     ></textarea>
