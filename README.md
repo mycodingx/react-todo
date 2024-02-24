@@ -30,4 +30,4 @@ npm run dev
 
 Now you can modify the code as per your requirements.
 
-Note: Currently we are loading the dummy data from [data.json] file in src directory. All the CRUD operations are working but you migth not see the add and edit data in your list. We are planning that to be available with a [NodeJS] backend till the we are outputting the data modifications in the console.
+Note: Currently we are loading the dummy data from [data.json] file in src directory. All the CRUD operations are working but you migth not see the add and edit data in your list. We are planning that to be available with a [NodeJS] backend till then you can see the output of all the data modifications in the console.
