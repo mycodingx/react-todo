@@ -1,5 +1,9 @@
 import React from "react";
-import { BsFillTrashFill } from "react-icons/bs";
+import {
+    BsFillTrashFill,
+    BsFillPencilFill,
+    BsBoxArrowInRight,
+} from "react-icons/bs";
 
 function truncateString(str, maxLength) {
     if (str.length > maxLength) {
@@ -11,8 +15,12 @@ function truncateString(str, maxLength) {
 function Item({ task }) {
     return (
         <div className="item">
-            <span>{truncateString(task, 30)}</span>
-            <BsFillTrashFill className="icon" style={{ fontSize: "15px" }} />
+            <span>{truncateString(task, 28)}</span>
+            <div className="actions">
+                <BsBoxArrowInRight className="icon" />
+                <BsFillPencilFill className="icon" />
+                <BsFillTrashFill className="icon" />
+            </div>
         </div>
     );
 }

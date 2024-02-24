@@ -1,25 +1,15 @@
-import { useEffect, useState } from "react";
+import { Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
+import AddItem from "./components/AddItem";
 import "./App.css";
-import Item from "./components/Item";
-import Navbar from "./components/Navbar";
-import jsonData from "./data.json";
 
 function App() {
-    const [data, setData] = useState([]);
-
-    useEffect(() => {
-        // Set the data from the imported JSON file
-        setData(jsonData);
-    }, []);
-
     return (
         <div className="container">
-            <Navbar />
-            <div className="item-list">
-                {data.map((item) => (
-                    <Item task={item.task} key={item.id} />
-                ))}
-            </div>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/add" element={<AddItem />} />
+            </Routes>
         </div>
     );
 }

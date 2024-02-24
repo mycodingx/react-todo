@@ -19,6 +19,16 @@
     width: 326px;
 }
 
+.navbar a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #111111;
+}
+
+.navbar a:hover {
+    color: #ff495c;
+}
+
 .icon {
     font-size: 20px;
     color: #ff495c;
@@ -39,4 +49,60 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.actions .icon {
+    font-size: 15px;
+}
+
+.add-item {
+    margin-top: 70px;
+    padding: 10px;
+}
+
+.add-item .text {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    resize: vertical;
+}
+
+.add-item .text:focus {
+    outline: none; /* Remove default focus outline */
+    border-color: #8cc084; /* Change border color on focus */
+    box-shadow: 0 0 0 2px rgba(149, 255, 0, 0.308); /* Add box shadow on focus */
+}
+
+.add-item .text:hover {
+    border-color: #999; /* Change border color on hover */
+}
+
+.add-item .btn {
+    width: 100%;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #8cc084;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: "Poppins", sans-serif;
+}
+
+.add-item .btn:hover {
+    background-color: #84bf8f; /* Darker shade of primary color on hover */
 }
