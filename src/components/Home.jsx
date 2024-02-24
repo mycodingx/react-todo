@@ -11,10 +11,16 @@ const Home = () => {
         setData(jsonData);
     }, []);
 
+    function handleDelete(id) {
+        const updatedTasks = data.filter((task) => task.id !== id);
+        setData(updatedTasks);
+        console.log("Updated data:", updatedTasks);
+    }
+
     return (
         <>
             <Navbar />
-            <List items={data} />
+            <List items={data} onDelete={handleDelete} />
         </>
     );
 };

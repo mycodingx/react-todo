@@ -13,7 +13,15 @@ function truncateString(str, maxLength) {
     return str;
 }
 
-function Item({ id, task }) {
+function Item({ id, task, onDelete }) {
+    const handleDelete = () => {
+        const isConfirmed = window.confirm(
+            `Are you sure you want to delete the task "${task}"?`
+        );
+        if (isConfirmed) {
+            onDelete(id);
+        }
+    };
     return (
         <div className="item">
             <span>{truncateString(task, 28)}</span>
@@ -24,9 +32,7 @@ function Item({ id, task }) {
                 <Link to={`/edit/${id}`}>
                     <BsFillPencilFill className="icon" />
                 </Link>
-                <Link to="/">
-                    <BsFillTrashFill className="icon" />
-                </Link>
+                <BsFillTrashFill className="icon" onClick={handleDelete} />
             </div>
         </div>
     );
